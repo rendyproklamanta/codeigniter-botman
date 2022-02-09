@@ -22,8 +22,28 @@ composer install
 /application/controllers/Telebot.php
 ```
 
-3. Install ngrok
-4. running with vhost
+3. Download and Install ngrok : https://ngrok.com/download <br/>
+- Make sure you have download and set cacert.pem in your php.ini !! <br/>
+- Download cacert : https://curl.haxx.se/ca/cacert.pem
+
+Locate php.ini in command line
+
+```bash
+php --ini
+```
+
+Edit php.ini and insert below (if you use MAMP. If not edit the path of location cacert.pem)
+
+```bash
+[curl]
+curl.cainfo="C:\MAMP\bin\apache\bin\cacert.pem"
+
+[openssl]
+openssl.cafile="C:\MAMP\bin\apache\bin\cacert.pem"
+openssl.capath="C:\MAMP\bin\apache\bin\"
+```
+
+5. running with vhost
 
 ```bash
 ngrok http -host-header=rewrite sites.dev:80
@@ -32,12 +52,12 @@ ngrok http -host-header=rewrite sites.dev:80
 5. Connect your ngrok https url to telegram webhook
 
 ```bash
-https://api.telegram.org/bot<TOKEN>/setWebhook?url=https://123.asd.ngrok.io
+https://api.telegram.org/bot<TOKEN>/setWebhook?url=https://123.asd.ngrok.io/telebot
 https://api.telegram.org/bot<TOKEN>/getWebhookInfo
 ```
 
-6. Install telegram web
-7. Go to url : https://t.me/{name}_bot
+6. Install telegram desktop for test runinng bot: https://desktop.telegram.org/
+7. Go to your bot url : https://t.me/{name}_bot
 8. Type : /start
 
 > Feature:
