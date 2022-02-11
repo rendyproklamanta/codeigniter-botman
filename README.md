@@ -52,7 +52,7 @@ ngrok http -host-header=rewrite sites.dev:80
 5. Connect your ngrok https url to telegram webhook
 
 ```bash
-https://api.telegram.org/bot<TOKEN>/setWebhook?url=https://123.asd.ngrok.io/telebot
+https://api.telegram.org/bot<TOKEN>/setWebhook?drop_pending_updates=1&url=https://123.asd.ngrok.io/telebot
 https://api.telegram.org/bot<TOKEN>/getWebhookInfo
 ```
 
