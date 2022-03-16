@@ -19,7 +19,7 @@ composer install
 2. Insert token from telegram bot
 
 ```bash
-/application/controllers/Telebot.php
+/application/core/BotmanCore.php
 ```
 
 3. Download and Install ngrok : https://ngrok.com/download <br/>
@@ -60,8 +60,15 @@ https://api.telegram.org/bot<TOKEN>/getWebhookInfo
 7. Go to your bot url : https://t.me/{name}_bot
 8. Type : /start
 
-> Feature:
+<br>
+
+> Features :
 1. Conversation Message using CodeigniterCache
+2. Register user to your web/app using telegram bot => (ConversationRegister)
+3. Login function from telegram to your web/app using API call and save session in sessionStorage() botman => (ConversationAuth)
+4. Show menu list => (ConversationMenu)
+
+<br>
 
 ## License
 
